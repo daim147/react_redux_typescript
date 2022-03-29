@@ -19,7 +19,7 @@ const RepositoriesList: React.FC = () => {
 				{loading && <h3>Loading...</h3>}
 				{error && <h3>{error}</h3>}
 				<div>
-					{data.length &&
+					{!!data.length &&
 						data.map((dt) => (
 							<details key={dt.links.npm}>
 								<summary>{dt.name}</summary>
